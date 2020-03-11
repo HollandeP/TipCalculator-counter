@@ -2,11 +2,14 @@
     <string name="app_name">TipCalculator-counter</string>
     <string name="numPeople"># of People:</string>
     <string name="mealCost">Meal Price:</string>
+    <string name="mealCostInput">Enter Amount</string>
     <string name="tip1">10%</string>
     <string name="tip2">15%</string>
     <string name="tip3">20%</string>
-    <string name="customTip">Enter Tip %</string>
+    <string name="customTip">Custom</string>
     <string name="tipString">Tip:</string>
     <string name="totalCost">Total:</string>
     <string name="perPerson">Total Per Person: </string>
+    <string name="submitButton">Submit</string>
+    <string name="resetButton">Reset</string>
 </resources>
