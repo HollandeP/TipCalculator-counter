@@ -24,7 +24,7 @@
         tools:targetApi="o" />
 
     <TextView
-        android:id="@+id/perPerson"
+        android:id="@+id/perPersonString"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/perPerson"
@@ -43,24 +43,25 @@
         android:layout_height="wrap_content"
         android:text="@string/tipString"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/totalCost"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.981" />
+        app:layout_constraintVertical_bias="0.817" />
 
     <TextView
-        android:id="@+id/totalCost"
+        android:id="@+id/totalString"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
         android:text="@string/totalCost"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/perPerson"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.433"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88" />
 
     <TextView
         android:id="@+id/MealPriceText"
@@ -95,7 +96,7 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/mealCostInput"
-        android:inputType="numberDecimal"
+        android:inputType="numberSigned"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -106,7 +107,7 @@
         tools:targetApi="o" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/customTipInput"
         android:layout_width="57dp"
         android:layout_height="40dp"
         android:ems="10"
@@ -114,12 +115,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/TipOptions"
+        app:layout_constraintStart_toEndOf="@+id/tipOptions"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.555" />
 
     <RadioGroup
-        android:id="@+id/TipOptions"
+        android:id="@+id/tipOptions"
         android:layout_width="92dp"
         android:layout_height="155dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -130,27 +131,27 @@
         app:layout_constraintVertical_bias="0.437">
 
         <RadioButton
-            android:id="@+id/tip1"
+            android:id="@+id/tip10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/tip1"
+            android:text="@string/tip10"
             android:textAlignment="textStart" />
 
         <RadioButton
-            android:id="@+id/tip2"
+            android:id="@+id/tip15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/tip2"
+            android:text="@string/tip15"
             android:textAlignment="textStart" />
 
         <RadioButton
-            android:id="@+id/tip3"
+            android:id="@+id/tip20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/tip3"
+            android:text="@string/tip20"
             android:textAlignment="textStart" />
 
         <RadioButton
@@ -170,14 +171,14 @@
         android:layout_marginStart="40dp"
         android:text="@string/submitButton"
         app:layout_constraintBottom_toTopOf="@+id/tipString"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/resetButton"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TipOptions"
+        app:layout_constraintTop_toBottomOf="@+id/tipOptions"
         app:layout_constraintVertical_bias="0.272" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/resetButton"
         android:layout_width="126dp"
         android:layout_height="50dp"
         android:text="@string/resetButton"
@@ -185,7 +186,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.764"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TipOptions"
+        app:layout_constraintTop_toBottomOf="@+id/tipOptions"
         app:layout_constraintVertical_bias="0.272" />
+
+    <TextView
+        android:id="@+id/tipVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tipVal"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toEndOf="@+id/tipString"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.817" />
+
+    <TextView
+        android:id="@+id/totalVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/totalCostVal"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toEndOf="@+id/totalString"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88" />
+
+    <TextView
+        android:id="@+id/perPersonVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/perPersonVal"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toEndOf="@+id/perPersonString"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
