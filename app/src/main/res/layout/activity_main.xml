@@ -6,23 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/mealPriceAmount"
-        android:layout_width="212dp"
-        android:layout_height="44dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/mealCostInput"
-        android:inputType="numberDecimal"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
-        app:layout_constraintStart_toEndOf="@+id/MealPriceText"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116"
-        tools:targetApi="o" />
-
     <TextView
         android:id="@+id/perPersonString"
         android:layout_width="wrap_content"
@@ -76,8 +59,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.124" />
 
+    <EditText
+        android:id="@+id/mealPriceInput"
+        android:layout_width="212dp"
+        android:layout_height="44dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/mealCostHint"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toEndOf="@+id/MealPriceText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116"
+        tools:targetApi="o" />
+
     <TextView
-        android:id="@+id/mealPriceText"
+        android:id="@+id/numPeopleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/numPeople"
@@ -95,14 +95,14 @@
         android:layout_height="44dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/mealCostInput"
+        android:hint="@string/mealCostHint"
         android:inputType="numberSigned"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
-        app:layout_constraintStart_toEndOf="@+id/mealPriceText"
-        app:layout_constraintTop_toBottomOf="@+id/mealPriceAmount"
+        app:layout_constraintStart_toEndOf="@+id/numPeopleText"
+        app:layout_constraintTop_toBottomOf="@+id/mealPriceInput"
         app:layout_constraintVertical_bias="0.015"
         tools:targetApi="o" />
 
